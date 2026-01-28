@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="main.js"></script>
+  <style>
+    .deleted {
+      text-decoration: line-through;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <h3>POSTS</h3>
+  <div>
+    <table border="1" cellpadding="6">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>TITLE</th>
+          <th>VIEWS</th>
+          <th>STATUS</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody id="body_table"></tbody>
+    </table>
+  </div>
+
+  <div style="margin-top:10px;">
+    <!-- Tạo mới: để trống id -->
+    <input type="text" id="id_txt" placeholder="ID (để trống khi tạo mới)" />
+    <input type="text" id="title_txt" placeholder="Title" />
+    <input type="text" id="view_txt" placeholder="Views" />
+    <input type="submit" value="Save" onclick="Save()" />
+    <input type="submit" value="Clear" onclick="ClearPostForm()" />
+  </div>
+
+  <hr />
+
+  <h3>COMMENTS (CRUD)</h3>
+  <div>
+    <table border="1" cellpadding="6">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>TEXT</th>
+          <th>POST ID</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody id="comment_table"></tbody>
+    </table>
+  </div>
+
+  <div style="margin-top:10px;">
+    <!-- Tạo mới comment: để trống id -->
+    <input type="text" id="c_id_txt" placeholder="Comment ID (để trống khi tạo mới)" />
+    <input type="text" id="c_text_txt" placeholder="Text" />
+    <input type="text" id="c_postid_txt" placeholder="PostId" />
+    <input type="submit" value="Save Comment" onclick="SaveComment()" />
+    <input type="submit" value="Clear" onclick="ClearCommentForm()" />
+  </div>
+</body>
+</html>
